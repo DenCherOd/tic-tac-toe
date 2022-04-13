@@ -2,10 +2,11 @@ package ua.ithillel.tictactoe;
 
 import java.util.Scanner;
 
-public class StdoutCoordinateScanner implements CoordinateScanner {
+public class StdoutCoordinateScanner implements CoordinateScanner{
 
     private final Scanner scanner = new Scanner(System.in);
 
+    @Override
     public Coordinate scan() {
         String[] coordinates;
         do {
@@ -15,5 +16,4 @@ public class StdoutCoordinateScanner implements CoordinateScanner {
 
         return new Coordinate(Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1]));
     }
-
 }

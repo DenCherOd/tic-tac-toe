@@ -1,6 +1,7 @@
 package ua.ithillel.tictactoe;
 
 public class FieldDrawer {
+
     public void draw(Field field) {
         char[][] data = field.getData();
 
@@ -10,7 +11,6 @@ public class FieldDrawer {
             }
             System.out.println();
         }
-
         System.out.println();
     }
 }

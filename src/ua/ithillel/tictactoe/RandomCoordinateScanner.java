@@ -8,7 +8,12 @@ public class RandomCoordinateScanner implements CoordinateScanner {
 
     @Override
     public Coordinate scan() {
-        return new Coordinate(random.nextInt(3), random.nextInt(3));
+        Coordinate coordinate = new Coordinate(random.nextInt(3), random.nextInt(3));
+        CoordinateChecker checker = new CoordinateChecker();
+        if (checker.isEmpty(coordinate)) {
+            return coordinate;
+        } else {
+            return scan();
+        }
     }
-
 }
